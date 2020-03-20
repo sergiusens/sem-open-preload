@@ -1,0 +1,11 @@
+#!/bin/sh
+
+PRELOAD="$SNAP/sem-open-preload.so"
+
+if [ -z "$LD_PRELOAD" ]; then
+    export LD_PRELOAD="$PRELOAD"
+else
+    export LD_PRELOAD="$LD_PRELOAD:$PRELOAD"
+fi
+
+exec "$@"

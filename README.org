@@ -1,0 +1,22 @@
+#+TITLE: Using sem-open-preload
+
+This is mostly meant to be used with snaps. Add the source as a part
+
+** Using
+#+BEGIN_SRC yaml
+parts:
+  sem-open-preload:
+    source: https://github.com/sergiusens/sem-open-preload
+    plugin: make
+#+END_SRC
+
+And then add this =command-chain= to the apps entry that needs it:
+#+BEGIN_SRC yaml
+apps:
+  my-pyton-multiprocessing-app:
+    command-chain:
+      - sem-open-preload-launch
+#+END_SRC
+
+** Credits
+Base out of jdstrand's work found on [[https://git.launchpad.net/~jdstrand/+git/test-sem-open/tree/][his bzr repo]].
