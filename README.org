@@ -6,7 +6,7 @@ This is mostly meant to be used with snaps. Add the source as a part
 #+BEGIN_SRC yaml
 parts:
   sem-open-preload:
-    source: https://github.com/sergiusens/sem-open-preload
+    source: https://github.com/sergiusens/sem-open-preload.git
     plugin: make
 #+END_SRC
 
